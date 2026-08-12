@@ -12,6 +12,19 @@ Wiesia in the way">
 <title>Gry</title>
 <style>
 
+.video-tlo {
+position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  object-fit: cover;
+  transform: translate(-50%, -50%)
+}
+
 h1 {
 text-shadow: 2px 2px 5px white;
 }
@@ -50,7 +63,10 @@ footer {
 </h6>
 <hr>
 
-<body style="background-image: url('https://wallpaperaccess.com/full/90278.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
+<body>
+<video autoplay muted loop playsinline class="video-tlo"; style="margin: auto">
+	<source src="tlogry.mp4" type="video/mp4">
+</video>
 
 <div style="text-align: center;">
 <h2 style="text-align:center; font-size:18px; text-transform:uppercase;">Gry zawierające języki: EN, DE, FR, ES, RU</h2>
