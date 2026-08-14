@@ -12,6 +12,29 @@ Wiesia in the way">
 <title>Kot</title>
 <style>
 
+.video-container {
+            position: relative;
+            width: 360px;
+            height: 640px;
+            cursor: pointer;
+	    margin: auto;
+	    
+        }
+        
+.video-container img, .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+.video-container video {
+            display: none;
+        }
+
+
 h1 {
 text-shadow: 2px 2px 5px white;
 }
@@ -48,9 +71,22 @@ footer {
 
 <body style="background-image: url('https://wallpaperaccess.com/full/90278.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
 
-<div style="text-align: center;">
-<video src="bleble.mp4" controls width="480"></video>
-</div>
+<div class="video-container" onclick="odpalWideo()">       
+        <img id="miniaturka" src="bulbul.jpg" alt="Kliknij, aby odtworzyć">
+        <video id="mojeWideo" controls>
+        <source src="bleble.mp4" type="video/mp4">
+        </video>
+</div><script>
+        function odpalWideo() {
+            var video = document.getElementById("mojeWideo");
+            var img = document.getElementById("miniaturka");
+
+            img.style.display = "none";
+            video.style.display = "block";
+            video.play();                 
+        }
+    </script>
+
 
 <hr>
 <footer>
